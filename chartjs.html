@@ -1,57 +1,83 @@
 <!doctype html>
 <html>
 <head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.min.js" integrity="sha512-tQYZBKe34uzoeOjY9jr3MX7R/mo7n25vnqbnrkskGr4D6YOoPYSpyafUAzQVjV6xAozAqUFIEFsCO4z8mnVBXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
   <meta charset="utf-8">
 <title>Untitled Document</title>
 </head>
 
 <body>
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+  <canvas id="bubble-chart" width="800" height="800"></canvas>
   
 <script>
   
-    const config = {
-  type: 'scatter',
-  data: data,
-  options: {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'top',
-      },
+    new Chart(document.getElementById("bubble-chart"), {
+    type: 'bubble',
+    data: {
+      labels: "Africa",
+      datasets: [
+        {
+          label: ["China"],
+          backgroundColor: "rgba(255,221,50,0.2)",
+          borderColor: "rgba(255,221,50,1)",
+          data: [{
+            x: 21269017,
+            y: 5.245,
+            r: 15
+          }]
+        }, {
+          label: ["Denmark"],
+          backgroundColor: "rgba(60,186,159,0.2)",
+          borderColor: "rgba(60,186,159,1)",
+          data: [{
+            x: 258702,
+            y: 7.526,
+            r: 10
+          }]
+        }, {
+          label: ["Germany"],
+          backgroundColor: "rgba(0,0,0,0.2)",
+          borderColor: "#000",
+          data: [{
+            x: 3979083,
+            y: 6.994,
+            r: 15
+          }]
+        }, {
+          label: ["Japan"],
+          backgroundColor: "rgba(193,46,12,0.2)",
+          borderColor: "rgba(193,46,12,1)",
+          data: [{
+            x: 4931877,
+            y: 5.921,
+            r: 15
+          }]
+        }
+      ]
+    },
+    options: {
       title: {
         display: true,
-        text: 'Chart.js Scatter Chart'
+        text: 'Predicted world population (millions) in 2050'
+      }, scales: {
+        yAxes: [{ 
+          scaleLabel: {
+            display: true,
+            labelString: "Happiness"
+          }
+        }],
+        xAxes: [{ 
+          scaleLabel: {
+            display: true,
+            labelString: "GDP (PPP)"
+          }
+        }]
       }
     }
-  },
-};
-  
-  const DATA_COUNT = 7;
-const NUMBER_CFG = {count: DATA_COUNT, rmin: 1, rmax: 1, min: 0, max: 100};
-
-const data = {
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: Utils.bubbles(NUMBER_CFG),
-      borderColor: Utils.CHART_COLORS.red,
-      backgroundColor: Utils.transparentize(Utils.CHART_COLORS.red, 0.5),
-    },
-    {
-      label: 'Dataset 2',
-      data: Utils.bubbles(NUMBER_CFG),
-      borderColor: Utils.CHART_COLORS.orange,
-      backgroundColor: Utils.transparentize(Utils.CHART_COLORS.orange, 0.5),
-    }
-  ]
-};
+});
     
-  
 </script>
 
   
