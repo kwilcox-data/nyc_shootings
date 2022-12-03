@@ -1,33 +1,35 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>NYC Shootings, Year to Date (2022)</title>
-	
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-	<style>
-		#map { height: 180px; }
-	
-</head>
+<!DOCTYPE html>
+<html lang="en">
 
-<body>
-	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin="">
+  <head>
+    <title>NYC Shootings, 2022</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
 
-<div id="map"></div>
-	var geojsonFeature = {
-    "type": "Feature",
-    "properties": {
-        "name": "Coors Field",
-        "amenity": "Baseball Stadium",
-        "popupContent": "This is where the Rockies play!"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [-104.99404, 39.75621]
-    }
-};
-	</script>
-	
-</body>
+    <!-- Load jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+    <!-- Load Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+
+    <!-- Load PapaParse to read csv files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+  </head>
+
+  <body>
+
+    <canvas id="container" style="width:100%; height:400px;"></canvas>
+    
+    <p style="font-family: Helvetica; color: #333; padding: 1em 2em; font-size: 12px">
+      Sources: TrendCT, NY Times, Stanford Ed Data Archive, American Community Survey
+      <br>
+      <a href="https://github.com/HandsOnDataViz/chartjs-scatter">View data and code</a>,
+      created by <a href="https://handsondataviz.org/">HandsOnDataViz</a>
+      with <a href="https://www.chartjs.org/">Chart.js</a>
+    </p>
+
+    <script src="script.js"></script>
+
+  </body>
+
 </html>
-
