@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   var TITLE = 'Income and Test Scores in Connecticut School Districts, 2009-13';
 
-  var POINT_X = 'OCCUR_DATE	'; // column name for x values in data.csv
+  var POINT_X = 'OCCUR_DATE'; // column name for x values in data.csv
   var POINT_X_PREFIX = ''; // prefix for x values, eg '$'
   var POINT_X_POSTFIX = ''; // postfix for x values, eg '%'
 
