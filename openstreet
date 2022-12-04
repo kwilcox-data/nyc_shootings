@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+  
+  <container>
+ 
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-74.51889038085939%2C40.458964451811894%2C-73.61251831054689%2C40.934783944175166&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=11/40.6973/-74.0657">View Larger Map</a></small>
+  
+  </container>
+  
+</body>
+</html>
+
